@@ -1,28 +1,64 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="raw">
+      <hsx-button @click="fn" plain disabled type="primary">按钮</hsx-button>
+      <hsx-button disabled plain type="info">登录</hsx-button>
+      <hsx-button disabled plain type="danger">注册</hsx-button>
+      <hsx-button disabled plain type="warning">注册</hsx-button>
+      <hsx-button disabled plain type="success">注册</hsx-button>
+      <hsx-button disabled plain>注册</hsx-button>
+    </div>
+    <div class="raw">
+      <hsx-button
+        circle
+        disabled
+        icon="hsx-icon-delete"
+        type="primary"
+      ></hsx-button>
+      <hsx-button
+        circle
+        disabled
+        icon="hsx-icon-delete"
+        type="info"
+      ></hsx-button>
+      <hsx-button
+        circle
+        disabled
+        icon="hsx-icon-delete"
+        type="danger"
+      ></hsx-button>
+      <hsx-button
+        circle
+        disabled
+        icon="hsx-icon-delete"
+        type="warning"
+      ></hsx-button>
+      <hsx-button
+        circle
+        disabled
+        icon="hsx-icon-delete"
+        type="success"
+      ></hsx-button>
+      <hsx-button circle disabled icon="hsx-icon-delete"></hsx-button>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  methods: {
+    fn() {
+      console.log(123);
+    },
+  },
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<style lang="scss" scoped>
+.raw {
+  margin: 15px 0;
+  button {
+    margin: 0 12px;
+  }
 }
 </style>
