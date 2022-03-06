@@ -41,11 +41,36 @@
       ></hsx-button>
       <hsx-button circle disabled icon="hsx-icon-delete"></hsx-button>
     </div>
+    <div class="raw">
+      <hsx-button type="primary" @click="visible = true">弹框</hsx-button>
+      <hsx-dialog :visible.sync="visible" title="温馨提示">
+        <template v-slot:footer>
+          <hsx-button type="primary" @click="visible = false">确定</hsx-button>
+          <hsx-button @click="visible = false">取消</hsx-button>
+        </template>
+      </hsx-dialog>
+    </div>
+    <div class="raw">
+      <hsx-input
+        placeholder="请输入密码"
+        v-model="value"
+        clearable
+        show-password
+      ></hsx-input>
+      <i class="hsx-input__icon hsx-icon-circle-close"></i>
+      <i class="hsx-input__icon hsx-icon-view"></i>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      visible: false,
+      value: '111',
+    };
+  },
   methods: {
     fn() {
       console.log(123);
