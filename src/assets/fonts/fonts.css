@@ -163,6 +163,12 @@
   content: '\e6ba';
 }
 
+.hsx-icon-circle-close:before {
+  content: '\e6ba';
+  border: 1 solid;
+  border-radius: 50%;
+}
+
 .hsx-icon-nosignal:before {
   content: '\e6bb';
 }

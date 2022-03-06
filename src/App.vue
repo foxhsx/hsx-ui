@@ -56,9 +56,8 @@
         v-model="value"
         clearable
         show-password
+        type="password"
       ></hsx-input>
-      <i class="hsx-input__icon hsx-icon-circle-close"></i>
-      <i class="hsx-input__icon hsx-icon-view"></i>
     </div>
   </div>
 </template>
