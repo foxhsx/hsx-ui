@@ -60,11 +60,10 @@
       ></hsx-input>
     </div>
     <div class="raw">
-      <hsx-switch v-model="active" active-color="red" inactive-color="green" />
-    </div>
-    <div class="raw">
-      <hsx-radio v-model="active" label="1">男</hsx-radio>
-      <hsx-radio v-model="active" label="0">女</hsx-radio>
+      <hsx-radio-group v-model="active">
+        <hsx-radio label="1">男</hsx-radio>
+        <hsx-radio label="0">女</hsx-radio>
+      </hsx-radio-group>
     </div>
   </div>
 </template>
@@ -75,7 +74,7 @@ export default {
     return {
       visible: false,
       value: '111',
-      active: false,
+      active: '1',
     };
   },
   methods: {

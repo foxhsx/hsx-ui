@@ -1,5 +1,5 @@
 <template>
-  <label class="hsx-radio" :class="{ 'is-checked': value === label }">
+  <label class="hsx-radio" :class="{ 'is-checked': model === label }">
     <span class="hsx-radio__input">
       <span class="hsx-radio__inner"></span>
       <input
@@ -21,6 +21,11 @@
 <script>
 export default {
   name: 'HsxRadio',
+  inject: {
+    RadioGroup: {
+      default: '',
+    },
+  },
   props: {
     value: null,
     label: {
@@ -35,11 +40,16 @@ export default {
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.isGroup ? this.RadioGroup.value : this.value;
       },
       set(value) {
-        this.$emit('input', value);
+        this.isGroup
+          ? this.RadioGroup.$emit('input', value)
+          : this.$emit('input', value);
       },
+    },
+    isGroup() {
+      return !!this.RadioGroup;
     },
   },
 };
