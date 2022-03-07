@@ -62,6 +62,10 @@
     <div class="raw">
       <hsx-switch v-model="active" active-color="red" inactive-color="green" />
     </div>
+    <div class="raw">
+      <hsx-radio v-model="active" label="1">男</hsx-radio>
+      <hsx-radio v-model="active" label="0">女</hsx-radio>
+    </div>
   </div>
 </template>
 
