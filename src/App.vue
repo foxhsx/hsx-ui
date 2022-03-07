@@ -59,6 +59,9 @@
         type="password"
       ></hsx-input>
     </div>
+    <div class="raw">
+      <hsx-switch v-model="active" active-color="red" inactive-color="green" />
+    </div>
   </div>
 </template>
 
@@ -68,6 +71,7 @@ export default {
     return {
       visible: false,
       value: '111',
+      active: false,
     };
   },
   methods: {
