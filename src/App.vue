@@ -1,11 +1,11 @@
 <template>
   <div id="app">
     <div class="raw">
-      <hsx-checkbox-group v-model="active">
-        <hsx-checkbox label="Vue"></hsx-checkbox>
-        <hsx-checkbox label="React"></hsx-checkbox>
-        <hsx-checkbox label="Angular"></hsx-checkbox>
-      </hsx-checkbox-group>
+      <hsx-form :model="model" label-width="100px">
+        <hsx-form-item label="用户名">
+          <hsx-input placeholder="请输入用户名" />
+        </hsx-form-item>
+      </hsx-form>
     </div>
   </div>
 </template>
@@ -14,7 +14,7 @@
 export default {
   data() {
     return {
-      active: [],
+      model: {},
     };
   },
   methods: {

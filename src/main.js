@@ -8,6 +8,8 @@ import Radio from './components/radio.vue';
 import RadioGroup from './components/radio-group.vue';
 import Checkbox from './components/checkbox.vue';
 import CheckboxGroup from './components/checkbox-group.vue';
+import Form from './components/form.vue';
+import FormItem from './components/form-item.vue';
 import './assets/fonts/fonts.css';
 
 Vue.config.productionTip = false;
@@ -19,6 +21,8 @@ Vue.component(Radio.name, Radio);
 Vue.component(RadioGroup.name, RadioGroup);
 Vue.component(Checkbox.name, Checkbox);
 Vue.component(CheckboxGroup.name, CheckboxGroup);
+Vue.component(Form.name, Form);
+Vue.component(FormItem.name, FormItem);
 
 new Vue({
   render: (h) => h(App),
