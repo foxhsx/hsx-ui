@@ -1,11 +1,12 @@
 <template>
-  <label class="hsx-checkbox" :class="{ 'is-checked': model }">
+  <label class="hsx-checkbox" :class="{ 'is-checked': isChecked }">
     <span class="hsx-checkbox__input">
       <span class="hsx-checkbox__inner"></span>
       <input
         type="checkbox"
         :name="name"
         v-model="model"
+        :value="label"
         class="hsx-checkbox__original"
       />
     </span>
@@ -20,6 +21,11 @@
 <script>
 export default {
   name: 'HsxCheckbox',
+  inject: {
+    CheckboxGroup: {
+      default: '',
+    },
+  },
   props: {
     value: {
       type: Boolean,
@@ -37,11 +43,20 @@ export default {
   computed: {
     model: {
       get() {
-        return this.value;
+        return this.isGroup ? this.CheckboxGroup.value : this.value;
       },
       set(value) {
-        this.$emit('input', value);
+        this.isGroup
+          ? this.CheckboxGroup.$emit('input', value)
+          : this.$emit('input', value);
       },
+    },
+    isGroup() {
+      return !!this.CheckboxGroup;
+    },
+    isChecked() {
+      // 如果有选中项
+      return this.isGroup ? this.model.includes(this.label) : this.model;
     },
   },
 };

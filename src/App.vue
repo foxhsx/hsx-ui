@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <div class="raw">
-      <hsx-checkbox v-model="active"></hsx-checkbox>
+      <hsx-checkbox-group v-model="active">
+        <hsx-checkbox label="Vue"></hsx-checkbox>
+        <hsx-checkbox label="React"></hsx-checkbox>
+        <hsx-checkbox label="Angular"></hsx-checkbox>
+      </hsx-checkbox-group>
     </div>
   </div>
 </template>
@@ -10,7 +14,7 @@
 export default {
   data() {
     return {
-      active: false,
+      active: [],
     };
   },
   methods: {
