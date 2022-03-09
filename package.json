@@ -1,7 +1,11 @@
 {
-  "name": "hsx-ui",
+  "name": "hblog-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/hblog-ui.umd.min.js",
+  "author": {
+    "name": "Shengxin He"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
