@@ -1,21 +1,25 @@
 <template>
   <transition name="dialog-fade">
     <!-- 对话框遮罩层 -->
-    <div v-show="visible" class="hsx-dialog__wrapper" @click.self="handleClose">
-      <div class="hsx-dialog" :style="{ width, marginTop: top }">
-        <div class="hsx-dialog__header">
+    <div
+      v-show="visible"
+      class="hblog-dialog__wrapper"
+      @click.self="handleClose"
+    >
+      <div class="hblog-dialog" :style="{ width, marginTop: top }">
+        <div class="hblog-dialog__header">
           <slot name="title">
             <!-- 默认展示的 title -->
-            <span class="hsx-dialog__title">{{ title }}</span>
+            <span class="hblog-dialog__title">{{ title }}</span>
           </slot>
-          <button class="hsx-dialog__headerbtn" @click="handleClose">
-            <i class="hsx-icon-close"></i>
+          <button class="hblog-dialog__headerbtn" @click="handleClose">
+            <i class="hblog-icon-close"></i>
           </button>
         </div>
-        <div class="hsx-dialog__body">
+        <div class="hblog-dialog__body">
           <slot><span>这是一段信息</span></slot>
         </div>
-        <div class="hsx-dialog__footer" v-if="$slots.footer">
+        <div class="hblog-dialog__footer" v-if="$slots.footer">
           <slot name="footer"></slot>
         </div>
       </div>
@@ -25,7 +29,7 @@
 
 <script>
 export default {
-  name: 'HsxDialog',
+  name: 'HblogDialog',
   props: {
     title: {
       type: String,
@@ -53,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hsx-dialog__wrapper {
+.hblog-dialog__wrapper {
   position: fixed;
   top: 0;
   left: 0;
@@ -63,7 +67,7 @@ export default {
   margin: 0;
   z-index: 2001;
   background-color: rgba(0, 0, 0, 0.5);
-  .hsx-dialog {
+  .hblog-dialog {
     position: relative;
     margin: 15vh auto 50px;
     background-color: #fff;
@@ -73,12 +77,12 @@ export default {
     width: 30%;
     &__header {
       padding: 20px 20px 10px;
-      .hsx-dialog__title {
+      .hblog-dialog__title {
         line-height: 24px;
         font-size: 18px;
         color: #303133;
       }
-      .hsx-dialog__headerbtn {
+      .hblog-dialog__headerbtn {
         position: absolute;
         top: 20px;
         right: 20px;
@@ -88,7 +92,7 @@ export default {
         outline: none;
         cursor: pointer;
         font-size: 16px;
-        .hsx-icon-close {
+        .hblog-icon-close {
           color: #909399;
         }
       }
@@ -103,7 +107,7 @@ export default {
       padding: 10px 20px 20px;
       text-align: right;
       box-sizing: border-box;
-      .hsx-button:first-child {
+      .hblog-button:first-child {
         margin-right: 20px;
       }
     }

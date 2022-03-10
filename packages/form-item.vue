@@ -1,7 +1,9 @@
 <template>
-  <div class="hsx-form-item">
-    <label class="hsx-form-item__label" :style="labelStyle">{{ label }}</label>
-    <div class="hsx-form-item__content">
+  <div class="hblog-form-item">
+    <label class="hblog-form-item__label" :style="labelStyle">{{
+      label
+    }}</label>
+    <div class="hblog-form-item__content">
       <slot></slot>
     </div>
   </div>
@@ -9,7 +11,7 @@
 
 <script>
 export default {
-  name: 'HsxFormItem',
+  name: 'HblogFormItem',
   inject: ['Form'],
   props: {
     label: {
@@ -28,9 +30,9 @@ export default {
 </script>
 
 <style lang="scss">
-.hsx-form-item {
+.hblog-form-item {
   margin-bottom: 25px;
-  .hsx-form-item__label {
+  .hblog-form-item__label {
     text-align: right;
     vertical-align: middle;
     float: left;
@@ -40,7 +42,7 @@ export default {
     padding: 0 12px 0 0;
     box-sizing: border-box;
   }
-  .hsx-form-item__content {
+  .hblog-form-item__content {
     line-height: 40px;
     position: relative;
     font-size: 14px;

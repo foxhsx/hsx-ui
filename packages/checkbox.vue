@@ -1,16 +1,16 @@
 <template>
-  <label class="hsx-checkbox" :class="{ 'is-checked': isChecked }">
-    <span class="hsx-checkbox__input">
-      <span class="hsx-checkbox__inner"></span>
+  <label class="hblog-checkbox" :class="{ 'is-checked': isChecked }">
+    <span class="hblog-checkbox__input">
+      <span class="hblog-checkbox__inner"></span>
       <input
         type="checkbox"
         :name="name"
         v-model="model"
         :value="label"
-        class="hsx-checkbox__original"
+        class="hblog-checkbox__original"
       />
     </span>
-    <span class="hsx-checkbox__label">
+    <span class="hblog-checkbox__label">
       <slot>
         <template>{{ label }}</template>
       </slot>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'HsxCheckbox',
+  name: 'HblogCheckbox',
   inject: {
     CheckboxGroup: {
       default: '',
@@ -63,7 +63,7 @@ export default {
 </script>
 
 <style lang="scss">
-.hsx-checkbox {
+.hblog-checkbox {
   color: #606266;
   font-weight: 500;
   font-size: 14px;
@@ -73,7 +73,7 @@ export default {
   white-space: nowrap;
   user-select: none;
   margin-right: 30px;
-  .hsx-checkbox__input {
+  .hblog-checkbox__input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -81,7 +81,7 @@ export default {
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .hsx-checkbox__inner {
+    .hblog-checkbox__inner {
       display: inline-block;
       position: relative;
       border: 1px solid #dcdfe6;
@@ -109,7 +109,7 @@ export default {
         transform-origin: center;
       }
     }
-    .hsx-checkbox__original {
+    .hblog-checkbox__original {
       opacity: 0;
       outline: none;
       position: absolute;
@@ -120,15 +120,15 @@ export default {
       z-index: -1;
     }
   }
-  .hsx-checkbox__label {
+  .hblog-checkbox__label {
     display: inline-block;
     padding-left: 10px;
     line-height: 19px;
     font-size: 14px;
   }
   &.is-checked {
-    .hsx-checkbox__input {
-      .hsx-checkbox__inner {
+    .hblog-checkbox__input {
+      .hblog-checkbox__inner {
         background-color: #409eff;
         border-color: #409eff;
         &::after {
@@ -136,7 +136,7 @@ export default {
         }
       }
     }
-    .hsx-checkbox__label {
+    .hblog-checkbox__label {
       color: #409eff;
     }
   }

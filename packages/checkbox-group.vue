@@ -1,12 +1,12 @@
 <template>
-  <div class="hsx-checkbox-group">
+  <div class="hblog-checkbox-group">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HsxCheckboxGroup',
+  name: 'HblogCheckboxGroup',
   props: {
     value: {
       type: Array,

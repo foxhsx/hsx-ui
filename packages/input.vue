@@ -1,7 +1,7 @@
 <template>
-  <div class="hsx-input" :class="{ 'hsx-input--suffix': showSuffix }">
+  <div class="hblog-input" :class="{ 'hblog-input--suffix': showSuffix }">
     <input
-      class="hsx-input__inner"
+      class="hblog-input__inner"
       :placeholder="placeholder"
       :type="showPassword ? (showPasswordVisible ? 'text' : 'password') : type"
       :name="name"
@@ -10,10 +10,10 @@
       :value="value"
       @input="handleInput"
     />
-    <span class="hsx-input__suffix" v-if="showSuffix">
-      <i class="hsx-icon-cancel" v-if="clearable && value" @click="clear"></i>
+    <span class="hblog-input__suffix" v-if="showSuffix">
+      <i class="hblog-icon-cancel" v-if="clearable && value" @click="clear"></i>
       <i
-        class="hsx-icon-visible"
+        class="hblog-icon-visible"
         v-if="showPassword && type === 'password'"
         @click="handlePassword"
       ></i>
@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: 'HsxInput',
+  name: 'HblogInput',
   data() {
     return {
       // 控制是否显示密码框
@@ -80,12 +80,12 @@ export default {
 </script>
 
 <style lang="scss">
-.hsx-input {
+.hblog-input {
   width: 100%;
   position: relative;
   font-size: 14px;
   display: inline-block;
-  .hsx-input__inner {
+  .hblog-input__inner {
     -webkit-appearance: none;
     background-color: #fff;
     background-image: none;
@@ -113,11 +113,11 @@ export default {
       cursor: not-allowed;
     }
   }
-  &.hsx-input--suffix {
-    .hsx-input__inner {
+  &.hblog-input--suffix {
+    .hblog-input__inner {
       padding-right: 30px;
     }
-    .hsx-input__suffix {
+    .hblog-input__suffix {
       position: absolute;
       height: 100%;
       right: 10px;

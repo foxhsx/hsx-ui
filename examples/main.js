@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
-import HsxUI from '../packages/index';
+import HBlog from '../packages/index';
 
 Vue.config.productionTip = false;
-Vue.use(HsxUI);
+Vue.use(HBlog);
 
 new Vue({
   render: (h) => h(App),

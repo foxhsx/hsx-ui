@@ -1,12 +1,12 @@
 <template>
-  <div class="hsx-radio-group">
+  <div class="hblog-radio-group">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HsxRadioGroup',
+  name: 'HblogRadioGroup',
   provide() {
     return {
       RadioGroup: this,

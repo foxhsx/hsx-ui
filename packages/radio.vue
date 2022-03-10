@@ -1,16 +1,16 @@
 <template>
-  <label class="hsx-radio" :class="{ 'is-checked': model === label }">
-    <span class="hsx-radio__input">
-      <span class="hsx-radio__inner"></span>
+  <label class="hblog-radio" :class="{ 'is-checked': model === label }">
+    <span class="hblog-radio__input">
+      <span class="hblog-radio__inner"></span>
       <input
-        class="hsx-radio__original"
+        class="hblog-radio__original"
         :value="label"
         :name="name"
         type="radio"
         v-model="model"
       />
     </span>
-    <span class="hsx-radio__label">
+    <span class="hblog-radio__label">
       <slot>
         <template>{{ label }}</template>
       </slot>
@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'HsxRadio',
+  name: 'HblogRadio',
   inject: {
     RadioGroup: {
       default: '',
@@ -56,7 +56,7 @@ export default {
 </script>
 
 <style lang="scss">
-.hsx-radio {
+.hblog-radio {
   color: #606266;
   font-weight: 500;
   line-height: 1;
@@ -69,8 +69,8 @@ export default {
   margin-right: 30px;
   user-select: none;
   &.is-checked {
-    .hsx-radio__input {
-      .hsx-radio__inner {
+    .hblog-radio__input {
+      .hblog-radio__inner {
         border-color: #409eff;
         background-color: #409eff;
         &::after {
@@ -78,11 +78,11 @@ export default {
         }
       }
     }
-    .hsx-radio__label {
+    .hblog-radio__label {
       color: #409eff;
     }
   }
-  .hsx-radio__input {
+  .hblog-radio__input {
     white-space: nowrap;
     cursor: pointer;
     outline: none;
@@ -90,7 +90,7 @@ export default {
     line-height: 1;
     position: relative;
     vertical-align: middle;
-    .hsx-radio__inner {
+    .hblog-radio__inner {
       border: 1px solid #dcdfe6;
       border-radius: 100%;
       width: 14px;
@@ -113,7 +113,7 @@ export default {
         transition: transform 0.15s ease-in;
       }
     }
-    .hsx-radio__original {
+    .hblog-radio__original {
       opacity: 0;
       outline: none;
       position: absolute;
@@ -125,7 +125,7 @@ export default {
       margin: 0;
     }
   }
-  .hsx-radio__label {
+  .hblog-radio__label {
     font-size: 14px;
     padding-left: 10px;
   }

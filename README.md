@@ -1,24 +1,4 @@
-# hsx-ui
+# HBlog-ui
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### TODO LIST
+- 修复 CSS 打包后字体文件加载不上的问题

@@ -1,11 +1,12 @@
 <template>
   <div id="app">
     <div class="raw">
-      <hsx-form :model="model" label-width="100px">
-        <hsx-form-item label="用户名">
-          <hsx-input placeholder="请输入用户名" />
-        </hsx-form-item>
-      </hsx-form>
+      <hblog-form :model="model" label-width="100px">
+        <hblog-form-item label="用户名">
+          <hblog-input placeholder="请输入用户名" />
+        </hblog-form-item>
+        <hblog-button type="primary">change</hblog-button>
+      </hblog-form>
     </div>
   </div>
 </template>

@@ -1,8 +1,8 @@
 <template>
   <button
-    class="hsx-button"
+    class="hblog-button"
     :class="[
-      `hsx-button--${type}`,
+      `hblog-button--${type}`,
       {
         'is-plain': plain,
         'is-round': round,
@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: 'HsxButton',
+  name: 'HblogButton',
   props: {
     type: {
       type: String,
@@ -58,7 +58,7 @@ export default {
 
 <style lang="scss" scoped>
 // 初始样式
-.hsx-button {
+.hblog-button {
   display: inline-block;
   line-height: 1;
   border: 1px solid #dcdfe6;
@@ -84,6 +84,9 @@ export default {
     border-color: #c6e2ff;
     background-color: #ecf5ff;
   }
+  &:active {
+    transform: scale(0.85);
+  }
   &.is-round {
     border-radius: 20px;
     padding: 12px 23px;
@@ -101,12 +104,12 @@ export default {
     background-color: #fff;
     border-color: #ebeef5;
   }
-  [class*='hsx-icon'] + span {
+  [class*='hblog-icon'] + span {
     margin-left: 5px;
   }
 }
 // type 属性样式
-.hsx-button--primary {
+.hblog-button--primary {
   color: #fff;
   background-color: #409eff;
   border-color: #409eff;
@@ -124,7 +127,7 @@ export default {
     border-color: #a0cfff;
   }
 }
-.hsx-button--success {
+.hblog-button--success {
   color: #fff;
   background-color: #67c23a;
   border-color: #67c23a;
@@ -142,7 +145,7 @@ export default {
     border-color: #b3e19d;
   }
 }
-.hsx-button--warning {
+.hblog-button--warning {
   color: #fff;
   background-color: #e6a23c;
   border-color: #e6a23c;
@@ -160,7 +163,7 @@ export default {
     border-color: #f3d19e;
   }
 }
-.hsx-button--danger {
+.hblog-button--danger {
   color: #fff;
   background-color: #f56c6c;
   border-color: #f56c6c;
@@ -178,7 +181,7 @@ export default {
     border-color: #fab6b6;
   }
 }
-.hsx-button--info {
+.hblog-button--info {
   color: #fff;
   background-color: #909399;
   border-color: #909399;
@@ -197,7 +200,7 @@ export default {
   }
 }
 // plain 样式
-.hsx-button.is-plain {
+.hblog-button.is-plain {
   &:hover,
   &:focus {
     background-color: #fff;
@@ -212,7 +215,7 @@ export default {
     color: #c0c4cc;
   }
 }
-.hsx-button--primary.is-plain {
+.hblog-button--primary.is-plain {
   color: #409eff;
   background-color: #ecf5ff;
   border-color: #b3b3b3;
@@ -230,7 +233,7 @@ export default {
     border-color: #d9ecff;
   }
 }
-.hsx-button--success.is-plain {
+.hblog-button--success.is-plain {
   color: #67c23a;
   background-color: #f0f9eb;
   border-color: #c2e7b0;
@@ -248,7 +251,7 @@ export default {
     border-color: #e1f3d8;
   }
 }
-.hsx-button--warning.is-plain {
+.hblog-button--warning.is-plain {
   color: #e6a23c;
   background-color: #fdf6ec;
   border-color: #f5dab1;
@@ -266,7 +269,7 @@ export default {
     border-color: #faecd8;
   }
 }
-.hsx-button--danger.is-plain {
+.hblog-button--danger.is-plain {
   color: #f56c6c;
   background-color: #fef0f0;
   border-color: #fbc4c4;
@@ -284,7 +287,7 @@ export default {
     border-color: #fde2e2;
   }
 }
-.hsx-button--info.is-plain {
+.hblog-button--info.is-plain {
   color: #909399;
   background-color: #f4f4f5;
   border-color: #d3d4d6;

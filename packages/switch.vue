@@ -1,20 +1,20 @@
 <template>
   <label
-    class="hsx-switch"
+    class="hblog-switch"
     :class="{ 'is-checked': value }"
     @click="handleClick"
     :for="name"
   >
-    <input type="checkbox" class="hsx-switch__input" :name="name" />
-    <span class="hsx-switch__core" ref="core">
-      <span class="hsx-switch__button"></span>
+    <input type="checkbox" class="hblog-switch__input" :name="name" />
+    <span class="hblog-switch__core" ref="core">
+      <span class="hblog-switch__button"></span>
     </span>
   </label>
 </template>
 
 <script>
 export default {
-  name: 'HsxSwitch',
+  name: 'HblogSwitch',
   props: {
     value: {
       type: Boolean,
@@ -57,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.hsx-switch {
+.hblog-switch {
   display: inline-flex;
   align-items: center;
   position: relative;
@@ -65,7 +65,7 @@ export default {
   line-height: 20px;
   height: 20px;
   vertical-align: middle;
-  .hsx-switch__core {
+  .hblog-switch__core {
     margin: 0;
     display: inline-block;
     position: relative;
@@ -79,7 +79,7 @@ export default {
     cursor: pointer;
     transition: border-color 0.3s, background-color 0.3s;
     vertical-align: middle;
-    .hsx-switch__button {
+    .hblog-switch__button {
       position: absolute;
       top: 1px;
       left: 1px;
@@ -91,15 +91,15 @@ export default {
     }
   }
   &.is-checked {
-    .hsx-switch__core {
+    .hblog-switch__core {
       border-color: #409eff;
       background-color: #409eff;
-      .hsx-switch__button {
+      .hblog-switch__button {
         transform: translateX(20px);
       }
     }
   }
-  .hsx-switch__input {
+  .hblog-switch__input {
     position: absolute;
     width: 0;
     height: 0;
